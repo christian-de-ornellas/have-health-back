@@ -19,5 +19,7 @@
             "@controllers/*": ["./src/controllers/*"]
         }
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
 }

@@ -1,8 +1,8 @@
-import ClinicController from '@controllers/ClinicController'
-import { Router } from 'express'
+import ClinicController from "@controllers/ClinicController";
+import { Router } from "express";
 
-const routes = Router()
+const routes = Router();
 
-routes.get('/', ClinicController.index)
+routes.get("/", ClinicController.index);
 
-export default routes
+export default routes;

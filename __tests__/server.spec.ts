@@ -1,5 +1,5 @@
-describe('Server', () => {
-  it('status ', async () => {
-    expect(200).toEqual(200)
-  })
-})
+describe("Server", () => {
+    it("status ", async () => {
+        expect(200).toEqual(200);
+    });
+});

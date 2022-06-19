@@ -3,7 +3,7 @@
     "ignorePaths": [],
     "dictionaryDefinitions": [],
     "dictionaries": [],
-    "words": [],
+    "words": ["cnpj", "middlewares", "postgres", "typeorm"],
     "ignoreWords": [],
     "import": []
 }

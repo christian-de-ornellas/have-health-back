@@ -1,8 +1,8 @@
-import ClinicController from "@controllers/ClinicController";
+import CreateClinicController from "@controllers/CreateClinicController";
 import { Router } from "express";
 
 const routes = Router();
 
-routes.get("/", ClinicController.index);
+routes.post("/clinics", CreateClinicController.handle);
 
 export default routes;

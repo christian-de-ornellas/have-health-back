@@ -11,9 +11,7 @@ class App {
 
     public constructor() {
         AppDataSource.initialize();
-        dotenv.config({
-            path: process.env.NODE_ENV === "test" ? ".env.test" : ".env",
-        });
+        dotenv.config({});
         this.express = express();
         this.middlewares();
         this.routes();

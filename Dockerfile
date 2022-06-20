@@ -4,4 +4,4 @@ WORKDIR /usr/app
 COPY package.json ./
 RUN yarn config set no-progress && yarn 
 COPY . ./
-CMD yarn dev
+#CMD yarn start

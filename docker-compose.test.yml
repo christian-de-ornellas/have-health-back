@@ -1,17 +1,15 @@
-version: "3.9"
+version: "3"
 services:
     db:
-        image: postgres:9.6-alpine
+        image: postgres:13-alpine
         environment:
             POSTGRES_PASSWORD: postgres
             POSTGRES_USER: postgres
         volumes:
-            - ./pgdatatest:/var/lib/postgresql/data
+            - postgres-data:/var/lib/postgresql/data
         ports:
             - "5432:5432"
         restart: always
-        container_name: database
-
     app:
         container_name: server
         restart: always
@@ -20,7 +18,7 @@ services:
             - "3333:3333"
         depends_on:
             - db
-
         environment:
             - DB_HOST=db
-        command: node -v
+volumes:
+    postgres-data: {}

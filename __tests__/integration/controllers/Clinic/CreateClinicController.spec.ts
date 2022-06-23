@@ -14,9 +14,17 @@ describe("POST /clinics", () => {
         const response = await request(server)
             .post("/clinics")
             .send({
-                name: "Clínica Fake",
+                name: "Clínica Janeiro 200",
                 cnpj: "12345671",
-                addressId: 1,
+                place: "rua machado de assis",
+                number: 20,
+                neighborhood: "Vilar dos Teles",
+                complement: "Próximo a casa da cultura",
+                city: "São João de Meriti",
+                state: "RJ",
+                country: "Brasil",
+                lat: "-22.7732267",
+                long: "-43.359573",
             })
             .set("Accept", "application/json")
             .expect("Content-Type", /json/);

@@ -12,5 +12,29 @@ export class Clinic {
     cnpj: string;
 
     @Column()
-    addressId: number;
+    place: string;
+
+    @Column()
+    number: number;
+
+    @Column()
+    neighborhood: string;
+
+    @Column()
+    complement: string;
+
+    @Column()
+    city: string;
+
+    @Column()
+    state: string;
+
+    @Column()
+    country: string;
+
+    @Column()
+    lat: string;
+
+    @Column()
+    long: string;
 }

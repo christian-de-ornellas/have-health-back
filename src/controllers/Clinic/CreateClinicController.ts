@@ -4,9 +4,8 @@ import { Request, Response } from "express";
 class CreateClinicController {
     async handle(request: Request, response: Response): Promise<Response> {
         try {
-            const { name, cnpj, addressId } = request.body;
             const service = new CreateClinicService();
-            const result = await service.execute({ name, cnpj, addressId });
+            const result = await service.execute(request.body);
             if (result instanceof Error) {
                 return response.status(400).json({ result });
             }

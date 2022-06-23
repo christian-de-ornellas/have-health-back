@@ -1,9 +1,14 @@
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import {
+    Entity,
+    Column,
+    PrimaryGeneratedColumn,
+    CreateDateColumn,
+} from "typeorm";
 
 @Entity("clinics")
 export class Clinic {
-    @PrimaryGeneratedColumn()
-    _id: number;
+    @PrimaryGeneratedColumn("uuid")
+    id: number;
 
     @Column()
     name: string;
@@ -32,9 +37,12 @@ export class Clinic {
     @Column()
     country: string;
 
-    @Column()
-    lat: string;
+    @Column("float")
+    lat: number;
 
-    @Column()
-    long: string;
+    @Column("float")
+    long: number;
+
+    @CreateDateColumn()
+    created_at: Date;
 }

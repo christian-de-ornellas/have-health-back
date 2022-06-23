@@ -11,8 +11,8 @@ type ClinicRequest = {
     city: string;
     state: string;
     country: string;
-    lat: string;
-    long: string;
+    lat: number;
+    long: number;
 };
 
 class CreateClinicService {

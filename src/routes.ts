@@ -18,8 +18,8 @@ routes.post(
             city: Joi.string().required(),
             state: Joi.string().required(),
             country: Joi.string().required(),
-            lat: Joi.string().required(),
-            long: Joi.string().required(),
+            lat: Joi.number().required(),
+            long: Joi.number().required(),
         }),
     }),
     CreateClinicController.handle

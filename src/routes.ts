@@ -10,16 +10,16 @@ routes.post(
     celebrate({
         [Segments.BODY]: Joi.object().keys({
             name: Joi.string().required(),
-            cnpj: Joi.number().integer().required(),
+            cnpj: Joi.string().required(),
             place: Joi.string().required(),
-            number: Joi.number().integer().required(),
+            number: Joi.string(),
             neighborhood: Joi.string().required(),
-            complement: Joi.string().required(),
+            complement: Joi.string(),
             city: Joi.string().required(),
             state: Joi.string().required(),
             country: Joi.string().required(),
             lat: Joi.number().required(),
-            long: Joi.number().required(),
+            lng: Joi.number().required(),
         }),
     }),
     CreateClinicController.handle

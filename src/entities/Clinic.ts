@@ -19,13 +19,13 @@ export class Clinic {
     @Column()
     place: string;
 
-    @Column()
-    number: number;
+    @Column({ nullable: true })
+    number: string;
 
     @Column()
     neighborhood: string;
 
-    @Column()
+    @Column({ nullable: true })
     complement: string;
 
     @Column()
@@ -41,7 +41,7 @@ export class Clinic {
     lat: number;
 
     @Column("float")
-    long: number;
+    lng: number;
 
     @CreateDateColumn()
     created_at: Date;

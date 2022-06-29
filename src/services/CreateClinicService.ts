@@ -5,14 +5,14 @@ type ClinicRequest = {
     name: string;
     cnpj: string;
     place: string;
-    number: number;
+    number: string;
     neighborhood: string;
     complement: string;
     city: string;
     state: string;
     country: string;
     lat: number;
-    long: number;
+    lng: number;
 };
 
 class CreateClinicService {

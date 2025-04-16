@@ -3,16 +3,15 @@ import { errors } from "celebrate";
 import cors from "cors";
 import * as dotenv from "dotenv";
 import express from "express";
-
 import routes from "./routes";
+import { AppDataSource } from "@database/index";
 
 class App {
     public express: express.Application;
 
     public constructor() {
-        dotenv.config({
-            path: process.env.NODE_ENV === "test" ? ".env.test" : ".env",
-        });
+        AppDataSource.initialize();
+        dotenv.config({});
         this.express = express();
         this.middlewares();
         this.routes();

@@ -1,0 +1,9 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": ["cnpj", "middlewares", "postgres", "typeorm"],
+    "ignoreWords": [],
+    "import": []
+}
